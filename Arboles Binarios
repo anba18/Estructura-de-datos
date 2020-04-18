@@ -248,28 +248,28 @@ int contarHojas(ABB arbol)
 }
 void menu()
 {
-	cout<<"\t\t\t\t����������������������������������������������������"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                   ARBOL BINARIO DE BUSQUEDA      �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�              1.Insertar elemento                 �"<<endl;
-	cout<<"\t\t\t\t�              2.Mostrar arbol                     �"<<endl;
-	cout<<"\t\t\t\t�              3.Recorridos de profundiad          �"<<endl;
-	cout<<"\t\t\t\t�              4.Buscar elemento                   �"<<endl;
-	cout<<"\t\t\t\t�              5.Eliminar elemento                 �"<<endl;
-	cout<<"\t\t\t\t�              6.Recorrido por nieveles (Amplitud) �"<<endl;
-	cout<<"\t\t\t\t�              7.Altura del arbol                  �"<<endl;
-	cout<<"\t\t\t\t�              8.Construir arbol reflejo           �"<<endl;
-	cout<<"\t\t\t\t�              9.Contar nodos                      �"<<endl;
-	cout<<"\t\t\t\t�              10.Contar hojas                     �"<<endl;
-	cout<<"\t\t\t\t�              11.Nodos menores de 'k'             �"<<endl;
-	cout<<"\t\t\t\t�              12.SALIR                            �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;	
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t����������������������������������������������������"<<endl;
+	cout<<"\t\t\t\t########################################################"<<endl;
+	cout<<"\t\t\t\t#                                                      #"<<endl;
+	cout<<"\t\t\t\t#                                                      #"<<endl;
+	cout<<"\t\t\t\t#                                                      #"<<endl;
+	cout<<"\t\t\t\t#                   ARBOL BINARIO DE BUSQUEDA          #"<<endl;
+	cout<<"\t\t\t\t#                                                      #"<<endl;
+	cout<<"\t\t\t\t#              1.Insertar elemento                     #"<<endl;
+	cout<<"\t\t\t\t#              2.Mostrar arbol                         #"<<endl;
+	cout<<"\t\t\t\t#              3.Recorridos de profundiad              #"<<endl;
+	cout<<"\t\t\t\t#              4.Buscar elemento                       #"<<endl;
+	cout<<"\t\t\t\t#              5.Eliminar elemento                     #"<<endl;
+	cout<<"\t\t\t\t#              6.Recorrido por nieveles (Amplitud)     #"<<endl;
+	cout<<"\t\t\t\t#              7.Altura del arbol                      #"<<endl;
+	cout<<"\t\t\t\t#              8.Construir arbol reflejo               #"<<endl;
+	cout<<"\t\t\t\t#              9.Contar nodos                          #"<<endl;
+	cout<<"\t\t\t\t#              10.Contar hojas                         #"<<endl;
+	cout<<"\t\t\t\t#              11.Nodos menores de 'k'                 #"<<endl;
+	cout<<"\t\t\t\t#              12.SALIR                                #"<<endl;
+	cout<<"\t\t\t\t#                                                      #"<<endl;
+	cout<<"\t\t\t\t#                                                      #"<<endl;	
+	cout<<"\t\t\t\t#                                                      #"<<endl;
+	cout<<"\t\t\t\t########################################################"<<endl;
 			cout<<"Introduzca la opcion: ";
 }
 
