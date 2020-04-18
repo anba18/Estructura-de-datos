@@ -68,21 +68,21 @@ void destruir_pila( ptrPila &p)
 ------------------------------------------------------------------------*/
 void menu()
 {
-	cout<<"\t\t\t\t����������������������������������������������������"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                   COLAS                          �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�              1.INSERTAR PILA                     �"<<endl;
-	cout<<"\t\t\t\t�              2.DESEPILAR                         �"<<endl;
-	cout<<"\t\t\t\t�              3.MOSTRAR PILA                      �"<<endl;
-	cout<<"\t\t\t\t�              4.DESTRUIR PILA                     �"<<endl;
-	cout<<"\t\t\t\t�              5.SALIR                             �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;	
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t����������������������������������������������������"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                   COLAS                          #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#              1.INSERTAR PILA                     #"<<endl;
+	cout<<"\t\t\t\t#              2.DESEPILAR                         #"<<endl;
+	cout<<"\t\t\t\t#              3.MOSTRAR PILA                      #"<<endl;
+	cout<<"\t\t\t\t#              4.DESTRUIR PILA                     #"<<endl;
+	cout<<"\t\t\t\t#              5.SALIR                             #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;	
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;
 			cout<<"Introduzca la opcion: ";
 }
  
