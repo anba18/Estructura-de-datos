@@ -66,20 +66,20 @@ Nodoa *arbol = NULL;
 //-------------------------
 void menuPila(){
 	system("cls");
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                   MENU PILA                      °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°              1.INSERTAR                          °"<<endl;
-	cout<<"\t\t\t\t°              2.EXTRAER                           °"<<endl;
-	cout<<"\t\t\t\t°              3.VISUALIZAR                        °"<<endl;
-	cout<<"\t\t\t\t°              4.SALIR                             °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;	
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+	cout<<"\t\t\t\t######################################################"<<endl;
+	cout<<"\t\t\t\t#                                                   #"<<endl;
+	cout<<"\t\t\t\t#                                                   #"<<endl;
+	cout<<"\t\t\t\t#                                                   #"<<endl;
+	cout<<"\t\t\t\t#                   MENU PILA                       #"<<endl;
+	cout<<"\t\t\t\t#                                                   #"<<endl;
+	cout<<"\t\t\t\t#              1.INSERTAR                           #"<<endl;
+	cout<<"\t\t\t\t#              2.EXTRAER                            #"<<endl;
+	cout<<"\t\t\t\t#              3.VISUALIZAR                         #"<<endl;
+	cout<<"\t\t\t\t#              4.SALIR                              #"<<endl;
+	cout<<"\t\t\t\t#                                                   #"<<endl;
+	cout<<"\t\t\t\t#                                                   #"<<endl;	
+	cout<<"\t\t\t\t#                                                   #"<<endl;
+	cout<<"\t\t\t\t#####################################################"<<endl;
 			cout<<"INTRODUZCA LA OPCION: ";
 
 }
@@ -89,21 +89,21 @@ void menuPila(){
 //-------------------------
 void menu(){
 	system("cls");
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                   MENU COLA                      °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°              1.INSERTAR                          °"<<endl;
-	cout<<"\t\t\t\t°              2.EXTRAER                           °"<<endl;
-	cout<<"\t\t\t\t°              3.VISUALIZAR                        °"<<endl;
-	cout<<"\t\t\t\t°              4.VACIAR                            °"<<endl;
-	cout<<"\t\t\t\t°              5.SALIR                             °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;	
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+	cout<<"\t\t\t\t#####################################################"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                   MENU COLA                      #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#              1.INSERTAR                          #"<<endl;
+	cout<<"\t\t\t\t#              2.EXTRAER                           #"<<endl;
+	cout<<"\t\t\t\t#              3.VISUALIZAR                        #"<<endl;
+	cout<<"\t\t\t\t#              4.VACIAR                            #"<<endl;
+	cout<<"\t\t\t\t#              5.SALIR                             #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;	
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;
 			cout<<"INTRODUZCA LA OPCION: ";
 
 }
@@ -112,24 +112,24 @@ void menu(){
 //-------------------------
 void menua(){
 	system("cls");
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                MENU ARBOL BINARIOS               °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°              1.CREAR NUEVO NODO                  °"<<endl;
-	cout<<"\t\t\t\t°              2.MOSTRAR EL ARBOL                  °"<<endl;
-	cout<<"\t\t\t\t°              3.BUSCAR UN ELEMENTO                °"<<endl;
-	cout<<"\t\t\t\t°              4.RECORRIDO PRE-ORDEN               °"<<endl;
-	cout<<"\t\t\t\t°              5.RECORRIDO IN-ORDEN                °"<<endl;
-	cout<<"\t\t\t\t°              6.RECORRIDO POST-ORDEN              °"<<endl;
-	cout<<"\t\t\t\t°              7.SALIR                             °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;	
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                MENU ARBOL BINARIOS               #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#              1.CREAR NUEVO NODO                  #"<<endl;
+	cout<<"\t\t\t\t#              2.MOSTRAR EL ARBOL                  #"<<endl;
+	cout<<"\t\t\t\t#              3.BUSCAR UN ELEMENTO                #"<<endl;
+	cout<<"\t\t\t\t#              4.RECORRIDO PRE-ORDEN               #"<<endl;
+	cout<<"\t\t\t\t#              5.RECORRIDO IN-ORDEN                #"<<endl;
+	cout<<"\t\t\t\t#              6.RECORRIDO POST-ORDEN              #"<<endl;
+	cout<<"\t\t\t\t#              7.SALIR                             #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;	
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;
 			cout<<"INTRODUZCA LA OPCION: ";
 
 }
@@ -139,22 +139,22 @@ void menua(){
 void menul()
 {
     system("cls");
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                MENU LISTAS ENLAZADAS SIMPLES     °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°              1.INSERTAR AL INICIO                °"<<endl;
-	cout<<"\t\t\t\t°              2.INSERTAR AL FINAL                 °"<<endl;
-	cout<<"\t\t\t\t°              3.ELIMINAR ELEMENTO                 °"<<endl;
-	cout<<"\t\t\t\t°              4.REPORTAR LISTA                    °"<<endl;
-	cout<<"\t\t\t\t°              5.SALIR                             °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;	
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;	
+	cout<<"\t\t\t\t####################################################"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                MENU LISTAS ENLAZADAS SIMPLES     #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#              1.INSERTAR AL INICIO                #"<<endl;
+	cout<<"\t\t\t\t#              2.INSERTAR AL FINAL                 #"<<endl;
+	cout<<"\t\t\t\t#              3.ELIMINAR ELEMENTO                 #"<<endl;
+	cout<<"\t\t\t\t#              4.REPORTAR LISTA                    #"<<endl;
+	cout<<"\t\t\t\t#              5.SALIR                             #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;	
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;	
 			cout<<"INTRODUZCA LA OPCION: ";
 
 } 
@@ -583,23 +583,23 @@ void cola(){
 
 int main(int argc, char** argv) {
 	int n,op;
-	system(" Color 06");
+	system(" Color 09");
 	do{
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                   MENU PRINCIPAL                 °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°              1.PILA                              °"<<endl;
-	cout<<"\t\t\t\t°              2.COLA                              °"<<endl;
-	cout<<"\t\t\t\t°              3.ARBOLES BINARIOS                  °"<<endl;
-	cout<<"\t\t\t\t°              4.LISTAS ENLAZADAS                  °"<<endl;
-	cout<<"\t\t\t\t°              5.SALIR                             °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°                                                  °"<<endl;	
-	cout<<"\t\t\t\t°                                                  °"<<endl;
-	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                   MENU PRINCIPAL                 #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#              1.PILA                              #"<<endl;
+	cout<<"\t\t\t\t#              2.COLA                              #"<<endl;
+	cout<<"\t\t\t\t#              3.ARBOLES BINARIOS                  #"<<endl;
+	cout<<"\t\t\t\t#              4.LISTAS ENLAZADAS                  #"<<endl;
+	cout<<"\t\t\t\t#              5.SALIR                             #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;	
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;
 			cout<<"Introduzca la opcion: ";
 			cin>>op;
 			switch (op)
@@ -627,3 +627,4 @@ int main(int argc, char** argv) {
 	return 0;
 	
 }
+
