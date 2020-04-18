@@ -89,21 +89,21 @@ void vaciaCola( struct cola &q)
 ------------------------------------------------------------------------*/
 void menu()
 {
-	cout<<"\t\t\t\t����������������������������������������������������"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                   COLAS                          �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�              1.INSERTAR COLA                     �"<<endl;
-	cout<<"\t\t\t\t�              2.DESENCOLAR                        �"<<endl;
-	cout<<"\t\t\t\t�              3.MOSTRAR COLA                      �"<<endl;
-	cout<<"\t\t\t\t�              4.VACIAR COLA                       �"<<endl;
-	cout<<"\t\t\t\t�              5.SALIR                             �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t�                                                  �"<<endl;	
-	cout<<"\t\t\t\t�                                                  �"<<endl;
-	cout<<"\t\t\t\t����������������������������������������������������"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                   COLAS                          #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#              1.INSERTAR COLA                     #"<<endl;
+	cout<<"\t\t\t\t#              2.DESENCOLAR                        #"<<endl;
+	cout<<"\t\t\t\t#              3.MOSTRAR COLA                      #"<<endl;
+	cout<<"\t\t\t\t#              4.VACIAR COLA                       #"<<endl;
+	cout<<"\t\t\t\t#              5.SALIR                             #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t#                                                  #"<<endl;	
+	cout<<"\t\t\t\t#                                                  #"<<endl;
+	cout<<"\t\t\t\t####################################################"<<endl;
 			cout<<"Introduzca la opcion: ";
 }
  
