@@ -1,0 +1,629 @@
+//----------------------------------------//
+//  Proyecto Final de Estructura de Datos //
+//                                        //
+//  Hecho Por:                            //
+//              1- Anel Barrios           //
+//              2- Ingrid Lorentz         //
+//              3- Isac Ortega            //
+//                                        //
+//                                        //
+//----------------------------------------
+#include <iostream>
+#include<conio.h>
+#include<stdlib.h>
+using namespace std;
+
+//-------------------------
+//       Estructuras
+//-------------------------
+//estructuras de nodos de las Pilas
+struct Nodop{
+	string dato;
+	struct Nodop *siguiente;
+};
+typedef Nodop *pPila;
+/* Estructura de los nodos de la cola */	
+struct nodo{
+    int nro;
+    struct nodo *sgte;
+};
+struct cola{/*Estructura de la cola*/
+    nodo *delante;
+    nodo *atras  ;
+};
+//estructuras de arbol
+struct Nodoa{
+	int datoa;
+	Nodoa *der;
+	Nodoa *izq;
+};
+//estructura de lista
+struct nodolista{
+       int nro;        // en este caso es un numero entero
+       struct nodolista *sgte;
+};
+
+typedef struct nodolista *Tlista;
+
+
+//-------------------------
+//    prototipo de arbol
+//-------------------------
+void menua();
+void parbol();
+Nodoa *crearNodoa(int);
+void insertarNodoa(Nodoa *&,int);
+void mostrarArbol(Nodoa *,int);
+bool busqueda(Nodoa *,int);
+void preOrden(Nodoa *);
+void inOrden(Nodoa *);
+void postOrden(Nodoa *);
+
+Nodoa *arbol = NULL;
+
+//-------------------------
+//Menu de opciones de pila
+//-------------------------
+void menuPila(){
+	system("cls");
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                   MENU PILA                      °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°              1.INSERTAR                          °"<<endl;
+	cout<<"\t\t\t\t°              2.EXTRAER                           °"<<endl;
+	cout<<"\t\t\t\t°              3.VISUALIZAR                        °"<<endl;
+	cout<<"\t\t\t\t°              4.SALIR                             °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;	
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+			cout<<"INTRODUZCA LA OPCION: ";
+
+}
+
+//-------------------------
+//Menu de opciones de cola
+//-------------------------
+void menu(){
+	system("cls");
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                   MENU COLA                      °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°              1.INSERTAR                          °"<<endl;
+	cout<<"\t\t\t\t°              2.EXTRAER                           °"<<endl;
+	cout<<"\t\t\t\t°              3.VISUALIZAR                        °"<<endl;
+	cout<<"\t\t\t\t°              4.VACIAR                            °"<<endl;
+	cout<<"\t\t\t\t°              5.SALIR                             °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;	
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+			cout<<"INTRODUZCA LA OPCION: ";
+
+}
+//-------------------------
+//Menu de opciones de arbol
+//-------------------------
+void menua(){
+	system("cls");
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                MENU ARBOL BINARIOS               °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°              1.CREAR NUEVO NODO                  °"<<endl;
+	cout<<"\t\t\t\t°              2.MOSTRAR EL ARBOL                  °"<<endl;
+	cout<<"\t\t\t\t°              3.BUSCAR UN ELEMENTO                °"<<endl;
+	cout<<"\t\t\t\t°              4.RECORRIDO PRE-ORDEN               °"<<endl;
+	cout<<"\t\t\t\t°              5.RECORRIDO IN-ORDEN                °"<<endl;
+	cout<<"\t\t\t\t°              6.RECORRIDO POST-ORDEN              °"<<endl;
+	cout<<"\t\t\t\t°              7.SALIR                             °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;	
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+			cout<<"INTRODUZCA LA OPCION: ";
+
+}
+//-------------------------------------
+//Menu de opciones de listas enlazadas
+//-------------------------------------
+void menul()
+{
+    system("cls");
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                MENU LISTAS ENLAZADAS SIMPLES     °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°              1.INSERTAR AL INICIO                °"<<endl;
+	cout<<"\t\t\t\t°              2.INSERTAR AL FINAL                 °"<<endl;
+	cout<<"\t\t\t\t°              3.ELIMINAR ELEMENTO                 °"<<endl;
+	cout<<"\t\t\t\t°              4.REPORTAR LISTA                    °"<<endl;
+	cout<<"\t\t\t\t°              5.SALIR                             °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;	
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;	
+			cout<<"INTRODUZCA LA OPCION: ";
+
+} 
+//-------------------
+//funciones de pila
+//-------------------
+
+//funcion principal de arbol binario
+void parbol(){
+	int datoa,opcion,contador=0;
+	do{
+		menua(); cin>>opcion;
+		switch (opcion){
+	    	case 1: cout<<"\nDigite un numero: ";
+		        	cin>>datoa;
+		        	insertarNodoa(arbol,datoa);
+		        	cout<<"\n";
+		        	system("pause");
+		        	break;
+	      	case 2: cout<<"\nMostrando el arbol completo: \n\n";
+		    		mostrarArbol(arbol,contador);
+		    		cout<<"\n";
+		    		system("pause");
+		    		break;
+		    case 3: cout<<"\nDigite el elemento a buscar: ";
+		        	cin>>datoa;
+		        	if(busqueda(arbol,datoa) == true){
+		        	cout<<"\nElemento "<<datoa<<" a sido encontrado en el arbol";
+					}
+					else{
+					cout<<"\nElemento no encontrado\n";
+					}
+					cout<<"\n";
+					system("pause");
+					break;
+			case 4: cout<<"\nRecorrido en Preorden: ";
+		    	    preOrden(arbol);
+		        	cout<<"\n\n";
+		        	system("pause");
+		        	break;
+		    case 5: cout<<"\nRecorrido en InOrden: ";
+		    	    inOrden(arbol);
+		        	cout<<"\n\n";
+		        	system("pause");
+		        	break;	
+		    case 6: cout<<"\nRecorrido en PostOrden: ";
+		    	    postOrden(arbol);
+					cout<<"\n\n";
+					system("pause");
+					break;  
+			}
+			system("cls");
+	}while(opcion != 7);
+}
+
+
+//-------------------------
+//  |funciones de pila|
+//-------------------------
+void agregarPila( pPila &pila,  string n )
+{
+     pPila aux;
+     aux = new(struct Nodop);  // apuntamos al nuevo nodo creado
+     aux->dato = n;
+     
+     aux->siguiente = pila ;
+     pila = aux ;
+}
+string sacarPila(pPila &pila){
+	string num;
+	pPila aux;
+	aux = pila;
+	num = aux->dato;
+	pila = aux->siguiente ;
+	delete(aux);
+     
+    return num;
+}
+void mostrar_pila( pPila pila )
+{
+     pPila aux;
+     aux = pila;     // apunta al inicio de la lista
+     
+     while( aux !=NULL )
+     {
+            cout<<"\t"<< aux->dato <<endl;
+            aux = aux->siguiente;
+     }    
+}
+
+//-------------------------
+//      Funcion cola
+//-------------------------
+void encolar( struct cola &q, int valor ){
+     struct nodo *aux = new(struct nodo);
+
+     aux->nro = valor;
+     aux->sgte = NULL;     
+
+     if( q.delante == NULL)
+
+         q.delante = aux;   // encola el primero elemento
+
+     else
+
+         (q.atras)->sgte = aux;
+
+     q.atras = aux;        //  siempre apunta al ultimo elemento
+}
+
+/*Desencolar elemento*/
+int desencolar( struct cola &q ){
+     int num ;
+     struct nodo *aux ;
+     aux = q.delante;      // aux apunta al inicio de la cola
+     num = aux->nro;
+
+     q.delante = (q.delante)->sgte;
+
+     delete(aux);          // libera memoria a donde apunta aux
+
+     return num;
+
+}
+
+/*Mostrar Cola*/
+void muestraCola( struct cola q ){
+     struct nodo *aux;
+     aux = q.delante;
+     while( aux != NULL )
+     {
+            cout<<"   "<< aux->nro ;
+
+            aux = aux->sgte;
+
+     }    
+}
+
+/*Eliminar todos los elementos de la Cola*/
+void vaciaCola( struct cola &q){
+     struct nodo *aux;
+     while( q.delante != NULL)
+
+     {
+            aux = q.delante;
+
+            q.delante = aux->sgte;
+
+            delete(aux);
+     }
+     q.delante = NULL;
+     q.atras   = NULL;
+}
+
+//-------------------------
+//Menu de opciones de arbol binario
+//-------------------------
+Nodoa * crearNodoa(int n){
+	Nodoa *nuevo_nodoa = new Nodoa();
+	
+	nuevo_nodoa->datoa = n;
+	nuevo_nodoa->der = NULL;
+	nuevo_nodoa->izq = NULL;
+	
+	return nuevo_nodoa;
+}
+
+void insertarNodoa(Nodoa *&arbol,int n){
+	if(arbol == NULL){ //Si el arbol esta vacio
+	Nodoa *nuevo_nodoa = crearNodoa(n);
+	arbol = nuevo_nodoa;
+	}
+	else{
+		int valorRaiz = arbol->datoa; //Obtenemos el valor de la raiz
+	    if(n < valorRaiz){ // Si el elemento es menor a la raiz, insertamos izq
+	    insertarNodoa(arbol->izq,n);
+		}
+		else{
+			insertarNodoa(arbol->der,n);
+		}	
+	}
+}
+//mostrar arbol 
+void mostrarArbol(Nodoa *arbol,int cont){
+	if(arbol == NULL){
+		return;
+	}
+	else{
+		mostrarArbol(arbol->der,cont+1);
+		for(int i=0;i<cont;i++){
+			cout<<"  ";
+		}
+		cout<<arbol->datoa<<endl;
+		mostrarArbol(arbol->izq,cont+1);
+	}
+}
+
+bool busqueda(Nodoa *arbol, int n){
+	if(arbol == NULL){ //Si el arbol esta vacio
+	   return false;
+	}
+	else if(arbol->datoa == n){ //Si el nodo es igual al elemento
+	    return true;
+	}
+	else if(n < arbol->datoa){
+		return busqueda(arbol->izq,n);
+	}
+	else{
+		return busqueda(arbol->der,n);
+	}
+}
+//Funcion para recorrido Preorden
+void preOrden(Nodoa *arbol){
+	if(arbol == NULL){ //Si el arbol esta vacio
+	   return;	
+	}
+	else{
+		cout<<arbol->datoa<<" - ";
+	    preOrden(arbol->izq);
+		preOrden(arbol->der);
+	}
+}
+//Funcion para recorrido InOrden
+void inOrden(Nodoa *arbol){
+	if(arbol == NULL){ //Si el arbol esta vacio
+	   return;
+	}
+	else{
+		inOrden(arbol->izq);
+		cout<<arbol->datoa<<" - ";
+		inOrden(arbol->der);
+	}
+}
+//Funcion para recorrido PostOrden
+void postOrden(Nodoa *arbol){
+	if(arbol == NULL){ //Si el arbol esta vacio
+	   return;
+	}
+	else{
+		cout<<arbol->datoa<<" - ";
+		postOrden(arbol->izq);
+		postOrden(arbol->der);
+	}
+}
+//-------------------------
+//     funcion de listas
+//-------------------------
+void insertarInicio(Tlista &lista, int valor)
+{
+    Tlista e;
+    e = new(struct nodolista);
+    e->nro = valor;
+    e->sgte = lista;
+    lista  = e;
+}
+ 
+void insertarFinal(Tlista &lista, int valor)
+{
+    Tlista t, e = new(struct nodolista);
+ 
+    e->nro  = valor;
+    e->sgte = NULL;
+ 
+    if(lista==NULL)
+    {
+        lista = e;
+    }
+    else
+    {
+        t = lista;
+        while(t->sgte!=NULL)
+        {
+            t = t->sgte;
+        }
+        t->sgte = e;
+    }
+ 
+}
+ 
+void reportarLista(Tlista lista)
+{
+     int i = 0;
+ 
+     while(lista != NULL)
+     {
+          cout <<' '<< i+1 <<") " << lista->nro << endl;
+          lista = lista->sgte;
+          i++;
+     }
+}
+ 
+ 
+void eliminarElemento(Tlista &lista, int valor)
+{
+    Tlista p, ant;
+    p = lista;
+ 
+    if(lista!=NULL)
+    {
+        while(p!=NULL)
+        {
+            if(p->nro==valor)
+            {
+                if(p==lista)
+                    lista = lista->sgte;
+                else
+                    ant->sgte = p->sgte;
+ 
+                delete(p);
+                return;
+            }
+            ant = p;
+            p = p->sgte;
+        }
+    }
+    else
+        cout<<" Lista vacia..!";
+}
+//-----------------------------
+// Funcion principal de la pila
+//------------------------------
+void pila(){
+	int opp;
+	string x,y;
+	pPila pila = NULL;
+	
+	do{
+		menuPila(); 
+		cin>> opp;
+		switch (opp){
+			case 1:
+				cout<< "\n Introduzca Palabra o numero ala Pila: "; cin>> x;
+                agregarPila( pila, x );
+                cout<<"\n\n\t" << x << " Pila agregada...\n";	
+				break;
+			case 2:
+			 	y = sacarPila( pila );
+                cout<<"\n\n\t\	"<< x <<" Pila eliminada...\n";
+				break;
+			case 3:
+				cout << "\n MOSTRANDO PILA\n";
+                if(pila!=NULL)
+                    mostrar_pila( pila );
+                else
+                    cout<<"\n	Pila vacia..!"<<endl;
+				break;
+		}
+	cout<<endl<<endl;
+    system("pause");  system("cls");
+	}while (opp != 4);
+	
+}
+//funcion principal de cola
+void cola(){
+	struct cola q;
+    				q.delante = NULL;
+   					q.atras   = NULL;
+    				int dato;  // insertar dato para cola
+    				int op;    // opcion del menu
+   					int x ;    // numero que devuelve la funcon pop
+   					do{
+     				menu();  cin>> op;
+        			switch(op)
+        			{
+           				case 1:
+              				cout<< "\n NUMERO A ENCOLAR: "; cin>> dato;
+                 			encolar( q, dato );
+                 			cout<<"\n\n\t\tNumero " << dato << " encolado...\n\n";
+            				break;
+            			case 2:
+                 			x = desencolar( q );
+                 			cout<<"\n\n\t\tNumero "<< x <<" desencolado...\n\n";
+            				break;
+            			case 3:
+                 			cout << "\n\n MOSTRANDO COLA\n\n";
+                 			if(q.delante!=NULL) muestraCola( q );
+                 			else   cout<<"\n\n\tCola vacia...!"<<endl;
+            				break;
+            			case 4:
+                 			vaciaCola( q );
+                 			cout<<"\n\n\t\tHecho...\n\n";
+            				break;
+         			}
+        			cout<<endl<<endl;
+        			system("pause");  system("cls"); 
+    				}while(op!=5);
+}
+//funcion principal de lista
+ void lista()
+{
+    Tlista lista = NULL;
+    int opl;     // opcion del menu
+    int _dato;  // elemenento a ingresar
+    int pos;    // posicion a insertar
+ 
+    do
+    {
+        menul();  cin>> opl;
+        switch(opl)
+        {
+            case 1:
+			     cout<< "\n NUMERO A INSERTAR: "; cin>> _dato;
+                 insertarInicio(lista, _dato);
+            break;
+            case 2:
+                 cout<< "\n NUMERO A INSERTAR: "; cin>> _dato;
+                 insertarFinal(lista, _dato );
+            break;
+            case 3:
+                cout<<"\n Valor a eliminar: "; cin>> _dato;
+                eliminarElemento(lista, _dato);
+            break;
+            case 4:
+                 cout << "\n\n MOSTRANDO LISTA\n\n";
+                 reportarLista(lista);
+            break;
+  		}
+     system("pause");  system("cls");
+    }while(opl!=5);
+
+}
+//----------------------------------------------------------------------------------------
+//---------------
+//Menu Principal
+//---------------
+
+int main(int argc, char** argv) {
+	int n,op;
+	system(" Color 06");
+	do{
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                   MENU PRINCIPAL                 °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°              1.PILA                              °"<<endl;
+	cout<<"\t\t\t\t°              2.COLA                              °"<<endl;
+	cout<<"\t\t\t\t°              3.ARBOLES BINARIOS                  °"<<endl;
+	cout<<"\t\t\t\t°              4.LISTAS ENLAZADAS                  °"<<endl;
+	cout<<"\t\t\t\t°              5.SALIR                             °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°                                                  °"<<endl;	
+	cout<<"\t\t\t\t°                                                  °"<<endl;
+	cout<<"\t\t\t\t°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"<<endl;
+			cout<<"Introduzca la opcion: ";
+			cin>>op;
+			switch (op)
+		{
+			case 1:
+				pila();
+				break;
+			case 2:
+				cola();
+				break;
+			case 3:
+				parbol();
+				break;
+			case 4:
+				lista();
+				break;
+	
+		}
+		cout<<endl<<endl;
+        system("pause");  system("cls");
+		
+	}while (op != 5);
+	
+	
+	return 0;
+	
+}
